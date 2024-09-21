@@ -1,0 +1,292 @@
+body {
+    margin: 0%;
+    overflow: hidden;
+}
+
+
+.whole {
+    background-color: gray;
+    position: absolute;
+}
+
+.nav {
+    width: 100vw;
+    height: 5vw;
+    background-color: rgb(192, 198, 198);
+    position: absolute;
+    border-radius: 0.1vw;
+    
+}
+
+.logo {
+    width: 10vw;
+    height: 10vw;
+    position: absolute;
+    background-image: url("ICT_LOGO_schwarz_transparent.png");
+    background-repeat: no-repeat;
+    background-size: 10vw;
+    margin-left: 45vw;
+}
+
+
+.main{
+    width: 100vw;
+    height: 100vw;
+    background-color: rgb(215, 215, 215);
+
+}
+
+.pictureEmojis1 {
+    width: 50vw;
+    height: 20vw;
+    position: absolute;
+    background-image: url("ICT_web20_bg-60.png");
+    background-repeat: no-repeat;
+    background-size: 15vw;
+    margin-top: 38vw;
+    margin-left: -4vw;
+}
+
+.pictureEmojis2 {
+    width: 50vw;
+    height: 20vw;
+    position: absolute;
+    background-image: url("ICT_web20_bg-39-1.png");
+    background-repeat: no-repeat;
+    background-size: 40vw;
+    margin-top: 33vw;
+    margin-left: 65vw;
+}
+
+.startingUp{
+    width: 30vw;
+    height: 10vw;
+    position: absolute;
+    margin-top: 16vw;
+    margin-left: 35vw;
+}
+
+.startUp_txt {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5vw;
+    position: absolute;
+    align-self: center;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.input {
+    width: 10vw;
+    height: 2vw;
+    position: absolute;
+    margin-left: 10vw;
+    margin-top: 6vw;
+    font-size: 1.5vw;
+    border-radius: 0.3vw;
+    text-align: center;
+}
+
+.beginn{
+    width: 10vw;
+    height: 2vw;
+    background-color: rgb(204, 202, 199);
+    position: absolute;
+    margin-top: 9vw;
+    margin-left: 10vw;
+    text-align: center;
+    border-radius: 1vw;
+    border: 0.1vw solid;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.77vw;
+    align-content: center;
+    animation: none;
+}
+
+.beginn:hover{
+    transition: 600ms;
+    background-color: aquamarine;
+}
+
+@keyframes wrongCode {
+    10% {
+        rotate: 8deg;
+    }
+    30% {
+        rotate: -8deg;
+    }
+    50% {
+        rotate: 8deg;
+    }
+    70%{
+        rotate: -8deg;
+    }
+}
+
+.choseChar {
+    width: 10vw;
+    height: 2vw;
+    background-color: rgb(217, 213, 207);
+    position: absolute;
+    margin-top: 10vw;
+    margin-left: -5vw;
+    text-align: center;
+    border-radius: 1vw;
+    border: 0.1vw solid;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.77vw;
+    color: black;
+    text-decoration: none;
+}
+
+.main-text-div{
+    width: 50vw;
+    height: 40vw;
+    background-color: rgb(223, 222, 221);
+    margin-left: 25vw;
+    margin-top: 7.5vw;
+    position: absolute;
+    display: none;
+    border-radius: 3vw;
+    border: 0.15vw solid rgb(230, 229, 229);
+}
+
+.main-text {
+    width: 45vw;
+    height: 35vw;
+    position: absolute;
+    margin-top: 2.5vw;
+    margin-left: 2.5vw;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9vw;
+}
+
+.avatar {
+    width: 15vw;
+    height: 15vw;
+    background-image: url("10135842.png");
+    background-repeat: no-repeat;
+    background-size: 15vw;
+    position: absolute;
+    margin-top: 30vw;
+    display: none;
+}
+
+
+
+/*-------------------------------------------*/
+.fadeOut{
+    width: 100vw;
+    height: 110%;
+    position: absolute;
+    z-index: 99;
+    background: radial-gradient(black, rgba(255, 255, 255, 0.355));
+    margin-top: -5vw;
+}
+
+
+.popUp{
+    width: 30vw;
+    height: 15vw;
+    position: absolute;
+    background-color: rgb(203, 203, 201);
+    border-radius: 1vw;
+    border: 0.1vw solid black;
+    margin-left: 35vw;
+    margin-top: 10vw;
+    z-index: 100;
+
+}
+
+.popUp_txt{
+    width: 27vw;
+    height: 12vw;
+    margin-left: 1.5vw;
+    margin-top: 1.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.77vw;
+}
+
+.popUp_btn{
+    width: 5vw;
+    height: 1.3vw;
+    border-radius: 0.3vw;
+    border: 0.15vw solid grey;
+    background-color: aliceblue;
+    text-align: center;
+    margin-left: 12vw;
+    margin-top: -1vw;
+    align-content: center;
+}
+
+.title_div{
+    width: 30vw;
+    height: 7.5vw;
+    position: absolute;
+    margin-left: 35vw;
+    margin-top: 7vw;
+    border-radius: 1vw;
+    border: solid rgb(58, 57, 57) 0.15vw;
+    align-content: center;
+}
+
+.title_txt{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vw;
+    margin-left: 5vw;
+}
+
+.avatar1 {
+    width: 15vw;
+    height: 15vw;
+    background-color: brown;
+    position: absolute;
+    margin-top: 17.5vw;
+    margin-left: 2.5vw;
+}
+
+.avatar2 {
+    width: 15vw;
+    height: 15vw;
+    background-color: brown;
+    position: absolute;
+    margin-top: 17.5vw;
+    margin-left: 22.5vw;
+}
+
+.avatar3 {
+    width: 15vw;
+    height: 15vw;
+    background-color: brown;
+    position: absolute;
+    margin-top: 17.5vw;
+    margin-left: 42.5vw;
+}
+
+.avatar4 {
+    width: 15vw;
+    height: 15vw;
+    background-color: brown;
+    position: absolute;
+    margin-top: 17.5vw;
+    margin-left: 62.5vw;
+}
+
+.avatar5 {
+    width: 15vw;
+    height: 15vw;
+    background-color: brown;
+    position: absolute;
+    margin-top: 17.5vw;
+    margin-left: 82.5vw;
+}
+
+
+
