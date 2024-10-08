@@ -38,9 +38,28 @@ function choseCharRedirect(NumPlayers){
 }
 
 function chosenChar(id) {
-    console.log(id)
-    sessionStorage.setItem("avatar", id)
-    location.replace("firstPage.html")
+    setTimeout(function(){
+        var isChecked1 = document.getElementById("checkbox1").checked;
+        var isChecked2 = document.getElementById("checkbox2").checked;
+        var isChecked3 = document.getElementById("checkbox3").checked;
+        var isChecked4 = document.getElementById("checkbox4").checked;
+
+        if (isChecked1 & isChecked2 & isChecked3 & isChecked4) {
+            location.replace("firstPage.html")
+        }
+    }, 100)
+    
+    var AgentName1 = document.getElementById("agent1").value
+    var AgentName2 = document.getElementById("agent2").value
+    var AgentName3 = document.getElementById("agent3").value
+    var AgentName4 = document.getElementById("agent4").value
+    
+    sessionStorage.setItem("agent1Name", AgentName1)
+    sessionStorage.setItem("agent2Name", AgentName2)
+    sessionStorage.setItem("agent3Name", AgentName3)
+    sessionStorage.setItem("agent4Name", AgentName4)
+    //sessionStorage.setItem("avatar", id)
+
 }
 
 function popUp(){
@@ -52,3 +71,42 @@ function popUp(){
     fadeOut.style.display = "none"
 }
 
+const pictures = ["ICT_LOGO_schwarz_transparent.png","ICT_web20_bg-60.png", "ICT_web20_bg-39-1.png"]
+
+function scrollPictureRight(id){
+    const chosingDiv = document.getElementById(id);
+    const computedStyleOfDiv = window.getComputedStyle(chosingDiv);
+    const currentbackgroundImageRaw = computedStyleOfDiv.backgroundImage
+    const currentbackgroundImageAlmost = currentbackgroundImageRaw.split("pictures/").pop();
+    const currentbackgroundImage = currentbackgroundImageAlmost.slice(0,-2)
+
+    var indexList = pictures.indexOf(currentbackgroundImage)
+
+    if (indexList == (pictures.length - 1)) {
+        var newIndex = 0
+    } else {
+        var newIndex = indexList + 1
+    }
+    
+    document.getElementById(id).style.backgroundImage = 'url("pictures/' + pictures[newIndex]+ '")'
+    
+}
+
+function scrollPictureLeft(id){
+    var test = "ICT_web20_bg-39-1.png"
+
+    const chosingDiv = document.getElementById(id);
+    const computedStyleOfDiv = window.getComputedStyle(chosingDiv);
+    const currentbackgroundImageRaw = computedStyleOfDiv.backgroundImage
+    const currentbackgroundImageAlmost = currentbackgroundImageRaw.split("pictures/").pop();
+    const currentbackgroundImage = currentbackgroundImageAlmost.slice(0,-2)
+
+    var indexList = pictures.indexOf(currentbackgroundImage)
+
+    if (indexList == 0) {
+        var newIndex = (pictures.length-1)
+    } else {
+        var newIndex = indexList - 1
+    }
+    document.getElementById(id).style.backgroundImage = 'url("pictures/' + pictures[newIndex]+ '")'
+}
