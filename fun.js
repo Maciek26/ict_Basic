@@ -33,6 +33,7 @@ function startLogin() {
 
 function choseCharRedirect(NumPlayers){
     sessionStorage.setItem("Players", NumPlayers)
+
     location.replace("choseChar.html")
     
 }
@@ -44,10 +45,39 @@ function chosenChar(id) {
         var isChecked3 = document.getElementById("checkbox3").checked;
         var isChecked4 = document.getElementById("checkbox4").checked;
 
-        if (isChecked1 & isChecked2 & isChecked3 & isChecked4) {
-            location.replace("firstPage.html")
+        var chosenAgents = []
+        i = 1
+        
+        var chosenAgent1 = document.getElementById("avatar1")
+        if (isChecked1 & isChecked2 & isChecked3 & isChecked4 ) {
+            while (i <= 4){
+                var id = "AgentLook" + i
+                var chosingDiv = document.getElementById(id);
+                var computedStyleOfDiv = window.getComputedStyle(chosingDiv);
+                var currentbackgroundImageRaw = computedStyleOfDiv.backgroundImage
+                var currentbackgroundImageAlmost = currentbackgroundImageRaw.split("pictures/").pop();
+                var currentbackgroundImage = currentbackgroundImageAlmost.slice(0,-2)
+                
+                chosenAgents.push(currentbackgroundImage)
+                i++
+            }
+            function hasDuplicates(array) {
+                return (new Set(array)).size !== array.length;
+            }
+            if (!hasDuplicates(chosenAgents)){
+                
+                location.replace("firstPage.html")
+            } else {
+                document.getElementById("checkbox1").checked = false;
+                document.getElementById("checkbox2").checked = false;
+                document.getElementById("checkbox3").checked = false;
+                document.getElementById("checkbox4").checked = false;
+                alert("Ihr dürft nicht mehr Mals den gleichen Agenten haben!")
+                console.log("duplicate not good")
+            }
+            
         }
-    }, 100)
+    }, 200)
     
     var AgentName1 = document.getElementById("agent1").value
     var AgentName2 = document.getElementById("agent2").value
@@ -64,14 +94,26 @@ function chosenChar(id) {
 
 function popUp(){
     var anzahlSpieler = sessionStorage.getItem("Players")
-    if (anzahlSpieler == "2") {
+    if(anzahlSpieler == "1") {
         avatar1.style.display = "block"
+    } else if (anzahlSpieler == "2") {
+        avatar1.style.display = "block"
+        avatar2.style.display = "block"
+    } else if (anzahlSpieler == "3")  {
+        avatar1.style.display = "block"
+        avatar2.style.display = "block"
+        avatar3.style.display = "block"
+    } else {
+        avatar1.style.display = "block"
+        avatar2.style.display = "block"
+        avatar3.style.display = "block"
+        avatar4.style.display = "block"
     }
     popUp_div.style.display = "none"
     fadeOut.style.display = "none"
 }
 
-const pictures = ["ICT_LOGO_schwarz_transparent.png","ICT_web20_bg-60.png", "ICT_web20_bg-39-1.png"]
+const pictures = ["ICT_LOGO_schwarz_transparent.png", "ICT_web20_bg-60.png", "ICT_web20_bg-39-1.png"]
 
 function scrollPictureRight(id){
     const chosingDiv = document.getElementById(id);

@@ -296,14 +296,14 @@ input::-webkit-inner-spin-button {
     width: 19vw;
     height: 25vw;
     background-color: brown;
-
+    display: none;
 }
 
 .avatar2 {
     width: 19vw;
     height: 25vw;
     background-color: brown;
-
+    display: none;
 
 }
 
@@ -311,7 +311,7 @@ input::-webkit-inner-spin-button {
     width: 19vw;
     height: 25vw;
     background-color: brown;
-    
+    display: none;
 
 }
 
@@ -319,7 +319,7 @@ input::-webkit-inner-spin-button {
     width: 19vw;
     height: 25vw;
     background-color: brown;
-    
+    display: none;
 
 }
 
