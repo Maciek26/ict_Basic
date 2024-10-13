@@ -1,0 +1,97 @@
+.txt-div {
+    width: 60vw;
+    height: 15vw;
+    position: absolute;
+    margin-left: 30vw;
+    margin-top: 10vw;
+    background-color: gray; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.8vw;
+    text-align: center;
+    border: solid white 0.1vw;
+    border-radius: 1.5vw;
+    padding-top: 1vw;
+}
+
+.sebi {
+    width: 20vw;
+    height: 30vw;
+    position: absolute;
+    background-color: brown;
+    margin-top: 10vw;
+    margin-left: 4vw;
+}
+
+.avatarDiv2 {
+    width: 60vw;
+    height: 17vw;
+    position: absolute;
+    margin-left: 30vw;
+    margin-top: 27vw;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    background-color: aquamarine;
+}
+
+.Agent1 {
+    text-align: center;
+    width: 14vw;
+    height: 13vw;
+    background-color: brown;
+}
+
+.txtFont {
+    font-size: 1.4vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inputCode{
+    position: absolute;
+    margin-top: 3vw;
+    width: 8vw;
+    height: 3vw;
+    margin-left: -7vw;
+    align-content: center;
+    text-align: center;
+    font-size: 1.6vw;
+}
+
+.submitTxt {
+    width: 7vw;
+    height: 1.5vw;
+    background-color: rgb(204, 202, 199);
+    position: absolute;
+    margin-top: 7vw;
+    margin-left: -7.26vw;
+    border-radius: 1.3vw;
+    border: 0.1vw solid;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3vw;
+    align-content: center;
+    animation: none;
+    padding: 0.7vw;
+}
+
+
+.submitTxt:hover{
+    transition: 600ms;
+    background-color: aquamarine;
+}
+
+@keyframes wrongCode {
+    10% {
+        rotate: 8deg;
+    }
+    30% {
+        rotate: -8deg;
+    }
+    50% {
+        rotate: 8deg;
+    }
+    70%{
+        rotate: -8deg;
+    }
+}

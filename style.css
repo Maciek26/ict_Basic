@@ -129,18 +129,18 @@ input::-webkit-inner-spin-button {
 }
 
 .choseChar {
-    width: 10vw;
-    height: 2vw;
+    width: 13vw;
+    height: 3vw;
     background-color: rgb(217, 213, 207);
     position: absolute;
-    margin-top: 10vw;
-    margin-left: -6.25vw;
+    margin-top: 8vw;
+    margin-left: -11.5vw;
     text-align: center;
     border-radius: 1vw;
     border: 0.1vw solid;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1vw;
-    
+    font-size: 1.2vw;
+    align-content: center;
     color: black;
     text-decoration: none;
 }
@@ -166,7 +166,7 @@ input::-webkit-inner-spin-button {
     align-items: center;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9vw;
+    font-size: 1.4vw;
 }
 
 .avatar {
@@ -182,24 +182,26 @@ input::-webkit-inner-spin-button {
 
 .choseNumPlayers{
     position: absolute;
-    width: 15vw;
+    width: 24vw;
     height: 3vw;
     display: none;
-    margin-left: 42.5vw;
-    margin-top: 20vw;
+    margin-left: 40.5vw;
+    margin-top: 22vw;
 }
 
 .menuNumPlayers{
     position: absolute;
-    width: 6vw;
-    height: 1.25vw;
-    margin-left: 4.5vw;
-    margin-top: 1.5vw;
+    width: 5vw;
+    height: 2vw;
+    margin-left: 7vw;
+    margin-top: 1.75vw;
+    background-color: antiquewhite;
+    align-content: center;
 }
 
 .NumPlayersTxt{
     position: absolute;
-    font-size: 0.9vw;
+    font-size: 1.3vw;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -264,8 +266,8 @@ input::-webkit-inner-spin-button {
 
 .title_txt{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 2vw;
-    margin-left: 6vw;
+    font-size: 2.5vw;
+    margin-left: 3.5vw;
 }
 
 .avatarDiv {
@@ -293,16 +295,20 @@ input::-webkit-inner-spin-button {
 }
 
 .avatar1 {
-    width: 19vw;
-    height: 25vw;
-    background-color: brown;
-    display: none;
+        width: 19vw;
+        height: 25vw;
+        background-color: gray;
+        border-radius: 2vw;
+        border: solid black 0.1vw;
+        display: none;
 }
 
 .avatar2 {
     width: 19vw;
     height: 25vw;
-    background-color: brown;
+    background-color: gray;
+    border-radius: 2vw;
+    border: solid black 0.1vw;
     display: none;
 
 }
@@ -310,7 +316,9 @@ input::-webkit-inner-spin-button {
 .avatar3 {
     width: 19vw;
     height: 25vw;
-    background-color: brown;
+    background-color: gray;
+    border-radius: 2vw;
+    border: solid black 0.1vw;
     display: none;
 
 }
@@ -318,7 +326,9 @@ input::-webkit-inner-spin-button {
 .avatar4 {
     width: 19vw;
     height: 25vw;
-    background-color: brown;
+    background-color: gray;
+    border-radius: 2vw;
+    border: solid black 0.1vw;
     display: none;
 
 }
@@ -334,7 +344,9 @@ input::-webkit-inner-spin-button {
 .choseLook {
     width: 15vw;
     height: 16vw;
-    background-color: aqua;
+    background-color: white;
+    border-radius: 1vw;
+    border: solid black 0.1vw;
     margin-left: 2vw;
     margin-top: 4.5vw;
     position: absolute;
@@ -371,7 +383,7 @@ input::-webkit-inner-spin-button {
     width: 2vw;
     height: 2vw;
     position: absolute;
-    margin-top: 21.5vw;
+    margin-top: 21.6vw;
     margin-left: 12vw;
     accent-color: grey;
 }
@@ -380,9 +392,9 @@ input::-webkit-inner-spin-button {
 .label {
     position: absolute;
     margin-top: 21.5vw;
-    margin-left: 6vw;
+    margin-left: 5.6vw;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.8vw;
 }
 
 /*--------------------First Page-----------------------*/

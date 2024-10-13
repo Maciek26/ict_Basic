@@ -47,10 +47,24 @@ function chosenChar(id) {
 
         var chosenAgents = []
         i = 1
-        
+        n = 1
         var chosenAgent1 = document.getElementById("avatar1")
-        if (isChecked1 & isChecked2 & isChecked3 & isChecked4 ) {
-            while (i <= 4){
+        var numPlayers = sessionStorage.getItem("Players")
+        var allChecked = true
+        while (n <= numPlayers){
+            console.log(isChecked1)
+            var isCheckedVar = "checkbox" + n
+            var currentChecked = document.getElementById(isCheckedVar).checked;
+            console.log(currentChecked + " test test")
+            if (!currentChecked){
+                var allChecked = false
+            }
+            console.log(allChecked)
+            n++
+        }
+
+        if (allChecked) {
+            while (i <= numPlayers){
                 var id = "AgentLook" + i
                 var chosingDiv = document.getElementById(id);
                 var computedStyleOfDiv = window.getComputedStyle(chosingDiv);
@@ -64,9 +78,10 @@ function chosenChar(id) {
             function hasDuplicates(array) {
                 return (new Set(array)).size !== array.length;
             }
+            console.log(chosenAgents)
             if (!hasDuplicates(chosenAgents)){
                 
-                location.replace("firstPage.html")
+                location.replace("firstMision.html")
             } else {
                 document.getElementById("checkbox1").checked = false;
                 document.getElementById("checkbox2").checked = false;
@@ -84,10 +99,10 @@ function chosenChar(id) {
     var AgentName3 = document.getElementById("agent3").value
     var AgentName4 = document.getElementById("agent4").value
     
-    sessionStorage.setItem("agent1Name", AgentName1)
-    sessionStorage.setItem("agent2Name", AgentName2)
-    sessionStorage.setItem("agent3Name", AgentName3)
-    sessionStorage.setItem("agent4Name", AgentName4)
+    sessionStorage.setItem("agentName1", AgentName1)
+    sessionStorage.setItem("agentName2", AgentName2)
+    sessionStorage.setItem("agentName3", AgentName3)
+    sessionStorage.setItem("agentName4", AgentName4)
     //sessionStorage.setItem("avatar", id)
 
 }

@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="firstMision.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    
+    
+    function whichChar(){
+        var numPlayers = sessionStorage.getItem("Players")
+        i = 1
+        var allAgentsName = ""
+        while (i <= numPlayers){
+            var temp = "agentName" + i
+            var newAgentName = sessionStorage.getItem(temp)
+            allAgentsName = allAgentsName + newAgentName + ", "
+            console.log(allAgentsName)
+            i++
+        }
+        document.getElementById("char").innerHTML = allAgentsName
+        
+}
+</script>
+<body onload="whichChar()">
+    
+    <div class="nav">
+        <div class="logo"></div>
+    </div>
+    <div class="sebi">
+        Ich bin Sebastian
+    </div>
+    <div class="txt-div">
+        <a>Willkommen <a id="char"></a> ihr seit also die neuen Agente? Hmm, das glaube ich nicht! Ihr müsst mir erst mal beweisen, dass ihr bereit seit! </a>
+        <br>
+        <a>Eure erste Mision ist er eine Email an diese Email Addrese zu schicken: verifikation@ict-scouts.ch</a>
+        <br>
+        <a>Nun Los macht schon! Hab ich ebenfalls erwähnt, dass es ein Wettbewerb ist wer es als erstes schaft?</a>
+    </div>
+    <div class="avatarDiv2">
+        <div class="Agent1">
+            <a class="txtFont">Name des Agenten</a>
+            <a class="txtFont">Spezialität</a>
+            <input type="text" class="inputCode">
+            <a class="submitTxt" onmousedown="">Einreichen</a>
+        </div>
+        <div class="Agent1">
+            <a>Name des Agenten</a>
+            <a>Spezialität</a>
+            <input type="text" class="inputCode">
+        </div>
+        <div class="Agent1">
+            <a>Name des Agenten</a>
+            <a>Spezialität</a>
+            <input type="text" class="inputCode">
+        </div>
+        <div class="Agent1">
+            <a>Name des Agenten</a>
+            <a>Spezialität</a>
+            <input type="text" class="inputCode">
+        </div>
+    </div>         
+</body>
+<script src="fun.js"></script>
+</html>
