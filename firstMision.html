@@ -12,14 +12,21 @@
         var numPlayers = sessionStorage.getItem("Players")
         i = 1
         var allAgentsName = ""
+        var allAgentsNameList = []
         while (i <= numPlayers){
             var temp = "agentName" + i
             var newAgentName = sessionStorage.getItem(temp)
             allAgentsName = allAgentsName + newAgentName + ", "
-            console.log(allAgentsName)
+            
+            console.log(document.getElementById("Agent"))
+            document.getElementById("Agent" + i).style.display = "block"
+            document.getElementById("agentName" + i).innerHTML = newAgentName
+            document.getElementById("spec" + i).innerHTML = sessionStorage.getItem("specialtyAgent" + i)
+
             i++
         }
         document.getElementById("char").innerHTML = allAgentsName
+        
         
 }
 </script>
@@ -28,7 +35,7 @@
     <div class="nav">
         <div class="logo"></div>
     </div>
-    <div class="sebi">
+    <div class="sebi"> 
         Ich bin Sebastian
     </div>
     <div class="txt-div">
@@ -39,26 +46,52 @@
         <a>Nun Los macht schon! Hab ich ebenfalls erwähnt, dass es ein Wettbewerb ist wer es als erstes schaft?</a>
     </div>
     <div class="avatarDiv2">
-        <div class="Agent1">
-            <a class="txtFont">Name des Agenten</a>
-            <a class="txtFont">Spezialität</a>
+        <div class="AgentDiv" id="Agent1">
+            <a class="txtFont" id="agentName1">Name des Agenten</a>
+            <br>
+            <a class="txtFont" id="spec1">Spezialität</a>
+            <br>
+            <a class="txtFont">Geheimcode: test</a>
+            <br>
+            <br>
             <input type="text" class="inputCode">
+            <br>
+            <br>
+            <br>
             <a class="submitTxt" onmousedown="">Einreichen</a>
         </div>
-        <div class="Agent1">
-            <a>Name des Agenten</a>
-            <a>Spezialität</a>
+        <div class="AgentDiv" id="Agent2">
+            <a class="txtFont" id="agentName2">Name des Agenten</a>
+            <br>
+            <a class="txtFont" id="spec2">Spezialität</a>
+            <br>
+            <a class="txtFont">Geheimcode: test</a>
+            <br><br>
             <input type="text" class="inputCode">
+            <br><br><br>
+            <a class="submitTxt" onmousedown="">Einreichen</a>
         </div>
-        <div class="Agent1">
-            <a>Name des Agenten</a>
-            <a>Spezialität</a>
+        <div class="AgentDiv" id="Agent3">
+            <a class="txtFont" id="agentName3">Name des Agenten</a>
+            <br>
+            <a class="txtFont" id="spec3">Spezialität</a>
+            <br>
+            <a class="txtFont">Geheimcode: test</a>
+            <br><br>
             <input type="text" class="inputCode">
+            <br><br><br>
+            <a class="submitTxt" onmousedown="">Einreichen</a>
         </div>
-        <div class="Agent1">
-            <a>Name des Agenten</a>
-            <a>Spezialität</a>
+        <div class="AgentDiv" id="Agent4">
+            <a class="txtFont" id="agentName4">Name des Agenten</a>
+            <br>
+            <a class="txtFont" id="spec4">Spezialität</a>
+            <br>
+            <a class="txtFont">Geheimcode: test</a>
+            <br><br>
             <input type="text" class="inputCode">
+            <br><br><br>
+            <a class="submitTxt" onmousedown="">Einreichen</a>
         </div>
     </div>         
 </body>

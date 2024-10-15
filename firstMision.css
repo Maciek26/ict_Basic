@@ -11,16 +11,10 @@
     border: solid white 0.1vw;
     border-radius: 1.5vw;
     padding-top: 1vw;
+   
 }
 
-.sebi {
-    width: 20vw;
-    height: 30vw;
-    position: absolute;
-    background-color: brown;
-    margin-top: 10vw;
-    margin-left: 4vw;
-}
+
 
 .avatarDiv2 {
     width: 60vw;
@@ -36,12 +30,16 @@
     background-color: aquamarine;
 }
 
-.Agent1 {
+.AgentDiv {
     text-align: center;
     width: 14vw;
-    height: 13vw;
+    height: 15vw;
     background-color: brown;
+    align-items: center;
+    display: none;
 }
+
+
 
 .txtFont {
     font-size: 1.4vw;
@@ -49,11 +47,9 @@
 }
 
 .inputCode{
-    position: absolute;
-    margin-top: 3vw;
     width: 8vw;
     height: 3vw;
-    margin-left: -7vw;
+   
     align-content: center;
     text-align: center;
     font-size: 1.6vw;
@@ -63,9 +59,9 @@
     width: 7vw;
     height: 1.5vw;
     background-color: rgb(204, 202, 199);
-    position: absolute;
-    margin-top: 7vw;
-    margin-left: -7.26vw;
+
+
+    
     border-radius: 1.3vw;
     border: 0.1vw solid;
     font-family: Arial, Helvetica, sans-serif;
@@ -73,6 +69,8 @@
     align-content: center;
     animation: none;
     padding: 0.7vw;
+   
+    
 }
 
 
@@ -94,4 +92,29 @@
     70%{
         rotate: -8deg;
     }
+}
+
+@keyframes changeColor {
+    0%{
+        background-color: green;
+    }
+    33% {
+        background-color: orange;
+    }
+    66% {
+        background-color: red;
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+.sebi {
+    width: 20vw;
+    height: 30vw;
+    position: absolute;
+    background-color: brown;
+    margin-top: 10vw;
+    margin-left: 4vw;
+
 }

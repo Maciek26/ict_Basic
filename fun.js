@@ -11,26 +11,6 @@ var avatar2 = document.getElementById("avatar2")
 var avatar3 = document.getElementById("avatar3")
 var avatar4 = document.getElementById("avatar4")
 
-function startLogin() {
-    var inputSecCode = document.getElementById("inputSecCode").value
-    
-    if (inputSecCode == 3421) {
-        avatar.style.display = "block"
-        main_text_div.style.display = "block"
-        menu_num_players.style.display = "block"
-        startButton.style.display = "none"
-        startingUp.style.display = "none"
-    } else {
-        startButton.style.animation = "none 0.1s"
-        setTimeout(function(){
-            startButton.style.animation = "wrongCode 0.5s"
-        }, 10)
-        
-       
-    }
-    
-}
-
 function choseCharRedirect(NumPlayers){
     sessionStorage.setItem("Players", NumPlayers)
 
@@ -40,11 +20,6 @@ function choseCharRedirect(NumPlayers){
 
 function chosenChar(id) {
     setTimeout(function(){
-        var isChecked1 = document.getElementById("checkbox1").checked;
-        var isChecked2 = document.getElementById("checkbox2").checked;
-        var isChecked3 = document.getElementById("checkbox3").checked;
-        var isChecked4 = document.getElementById("checkbox4").checked;
-
         var chosenAgents = []
         i = 1
         n = 1
@@ -52,10 +27,8 @@ function chosenChar(id) {
         var numPlayers = sessionStorage.getItem("Players")
         var allChecked = true
         while (n <= numPlayers){
-            console.log(isChecked1)
             var isCheckedVar = "checkbox" + n
             var currentChecked = document.getElementById(isCheckedVar).checked;
-            console.log(currentChecked + " test test")
             if (!currentChecked){
                 var allChecked = false
             }
@@ -78,9 +51,16 @@ function chosenChar(id) {
             function hasDuplicates(array) {
                 return (new Set(array)).size !== array.length;
             }
-            console.log(chosenAgents)
+            
             if (!hasDuplicates(chosenAgents)){
-                
+                n = 1
+                while (n <= numPlayers) {
+                    var AgentName = document.getElementById("agent" + n).value
+                    sessionStorage.setItem("agentName" + n, AgentName)
+                    
+                    sessionStorage.setItem("specialtyAgent" + n, chosenAgents[n-1].slice(0,-4))
+                    n++
+                }
                 location.replace("firstMision.html")
             } else {
                 document.getElementById("checkbox1").checked = false;
@@ -90,21 +70,30 @@ function chosenChar(id) {
                 alert("Ihr dürft nicht mehr Mals den gleichen Agenten haben!")
                 console.log("duplicate not good")
             }
-            
         }
     }, 200)
     
-    var AgentName1 = document.getElementById("agent1").value
-    var AgentName2 = document.getElementById("agent2").value
-    var AgentName3 = document.getElementById("agent3").value
-    var AgentName4 = document.getElementById("agent4").value
-    
-    sessionStorage.setItem("agentName1", AgentName1)
-    sessionStorage.setItem("agentName2", AgentName2)
-    sessionStorage.setItem("agentName3", AgentName3)
-    sessionStorage.setItem("agentName4", AgentName4)
-    //sessionStorage.setItem("avatar", id)
+}
 
+function startLogin() {
+    var inputSecCode = document.getElementById("inputSecCode").value
+    //Falls du echt diesen Code gefunden hast, dann schick mal 
+    //eine Email mit dem Betreff GhostKey an verifikation@ict-scouts.ch
+    if (inputSecCode == 3421) {
+        avatar.style.display = "block"
+        main_text_div.style.display = "block"
+        menu_num_players.style.display = "block"
+        startButton.style.display = "none"
+        startingUp.style.display = "none"
+    } else {
+        startButton.style.animation = "none 0.1s"
+        setTimeout(function(){
+            startButton.style.animation = "wrongCode 0.5s"
+        }, 10)
+        
+       
+    }
+    
 }
 
 function popUp(){
