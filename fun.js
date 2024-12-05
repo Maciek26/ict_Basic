@@ -1,4 +1,5 @@
 var avatar = document.getElementById("avatar")
+var main_div_dialoge = document.getElementById("main-div-dialog")
 var main_text_div = document.getElementById("main_text_div")
 var startButton = document.getElementById("startButton")
 var menu_num_players = document.getElementById("choseNumPlayers")
@@ -80,6 +81,7 @@ function startLogin() {
     //Falls du echt diesen Code gefunden hast, dann schick mal 
     //eine Email mit dem Betreff GhostKey an verifikation@ict-scouts.ch
     if (inputSecCode == 3421) {
+        //main_div_dialoge.style.display = "block"
         avatar.style.display = "block"
         main_text_div.style.display = "block"
         menu_num_players.style.display = "block"

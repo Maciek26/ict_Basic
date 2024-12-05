@@ -28,6 +28,31 @@ body {
     margin-left: 45vw;
 }
 
+@keyframes changeColor {
+    0%{
+        background-color: green;
+    }
+    33% {
+        background-color: orange;
+    }
+    66% {
+        background-color: red;
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+.time-stamp {
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+    margin-left: 0.5vw;
+    margin-top: 1.5vw;
+    background-color: black;
+    animation: changeColor;
+    animation-duration: 20s;
+}
 
 .main{
     width: 100vw;
@@ -144,7 +169,55 @@ input::-webkit-inner-spin-button {
     color: black;
     text-decoration: none;
 }
+/* dialoge */
+.main-div-dialog{
+    width: 80vw;
+    height: 40vw;
+    background-color: rgb(223, 222, 221);
+    margin-left: 10vw;
+    margin-top: 7.5vw;
+    position: absolute;
+    display: none;
+}
 
+.display-pic-dialog{
+    width: 60vw;
+    height: 30vw;
+    background-image: url("pictures/ICT_LOGO_schwarz_transparent.png");
+    background-repeat: no-repeat;
+    margin-left: 10vw;
+    margin-top: 7.5vw;
+    position: absolute;
+    display: block;
+}
+
+.arrow-Right-dialog {
+    width: 4vw;
+    height: 4vw;
+    margin-top: 35vw;
+    margin-left: 42vw;
+    position: absolute;
+    background-image: url("pictures/arrow.png");
+    background-repeat: no-repeat;
+    background-size: 3vw;
+    background-position: center;
+    
+}
+
+.arrow-Left-dialog {
+    width: 4vw;
+    height: 4vw;
+    margin-top: 35vw;
+    margin-left: 34vw;
+    position: absolute;
+    background-image: url("pictures/arrow.png");
+    background-repeat: no-repeat;
+    background-size: 3vw;
+    background-position: center;
+    transform: scaleX(-1);
+}
+
+/* chosing num agents*/
 .main-text-div{
     width: 50vw;
     height: 40vw;
@@ -406,3 +479,4 @@ input::-webkit-inner-spin-button {
     margin-top: 20vw;
     margin-left: 30vw;
 }
+
